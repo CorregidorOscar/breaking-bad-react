@@ -9,12 +9,23 @@ export default function Home() {
     const [characters, setCharacters] = useState();
 
     useEffect(() => {
-        let per = getCharacters();
-        per.then((x) => { setCharacters(x) })
-    })
+        let char = getCharacters();
+
+        char.then(r => {
+            setCharacters(r)
+
+        });
+    }, []);
+    // useEffect(() => {
+    //     let per = getCharacters();
+
+    //     per.then((x) => { setCharacters(x) })
+
+    // }, []);
 
     async function getCharacters() {
-        let api = await axios.get('https://www.breakingbadapi.com/api/characters');
+        const api = await axios.get('https://www.breakingbadapi.com/api/characters');
+        console.log(api.data)
         return (api.data);
 
     }
@@ -46,7 +57,7 @@ export default function Home() {
                     // signo ? si tira undefined al demorar tener que llenar el array character
                     characters?.map((e) => {
                         return <Card
-                            char_id={e.char_id} name={e.name} img={e.img} status={e.status} occupation={e.occupation}
+                            key={e.char_id} name={e.name} img={e.img} status={e.status} occupation={e.occupation}
                         />
                     })
                 }
