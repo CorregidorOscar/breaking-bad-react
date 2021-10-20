@@ -1,0 +1,17 @@
+.bg {
+  width: 100vw;
+  height: 100vh;
+  /* background-color: red; */
+  background-image: url(../../img/fondo2.jpg);
+  /* background-repeat: repeat-y; */
+  /* background-size: cover;
+  background-position: center; */
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
