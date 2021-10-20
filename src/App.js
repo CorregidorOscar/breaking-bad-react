@@ -1,6 +1,6 @@
 import Landing from './components/Landing/Landing'
 import './App.css';
-import { Route, Switch } from 'react-router'
+import { Route } from 'react-router'
 import Home from './components/Home/Home'
 
 
