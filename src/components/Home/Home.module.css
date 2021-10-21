@@ -1,17 +1,57 @@
+/* :root {
+  --color-Tom-Thumb: #345936;
+  --color-Green-Kelp: #254027;
+  --color-Hunter-Green: #162617;
+  --color-Fern-Green: #3b7332;
+  --color-Cod-Gray: #0d0d0d;
+} */
+@keyframes backgroundColorPalette {
+  0% {
+    background: #0d0d0d;
+  }
+  25% {
+    background: #162617;
+  }
+  50% {
+    background: #254027;
+  }
+  75% {
+    background: #345936;
+  }
+  100% {
+    background: #3b7332;
+  }
+}
 .bg {
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw;
+  height: 100vh; */
   /* background-color: red; */
-  background-image: url(../../img/fondo2.jpg);
-  /* background-repeat: repeat-y; */
-  /* background-size: cover;
-  background-position: center; */
+  /* background-image: url(../../img/wallpaperflare-cropped.jpeg); */
+  /* background-color: #104911; */
+  background-repeat: repeat-y;
+  background-size: auto;
+  background-position: center;
   min-height: 100vh;
   padding: 20px;
+  animation-name: backgroundColorPalette;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 .cards {
+  margin-top: 10px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 10px;
+  grid-template-rows: repeat(auto-fill, minmax(370px, 1fr));
+  /* grid-auto-rows: auto; */
+  grid-gap: 20px;
 }
+
+/* @media (min-width: 768px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 10px;
+  }
+} */

@@ -1,12 +1,46 @@
 .card {
-  height: 350px;
+  /* height: 350px; */
   padding: 15px;
-  background-color: rgb(251 255 0 / 50%);
+  background-color: #ffd449;
+  /* background-color: rgb(251 255 0 / 25%); */
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
+.card:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+
+.cardImg {
+  width: 100%;
+  /* height: 500px; */
+}
+@media (min-width: 768px) {
+  .cardImg {
+    height: 260px;
+  }
+}
 .cardImg img {
   width: 100%;
-  height: 200px;
+  height: 100%;
   border-radius: 10px;
+  height: min(100%, 450px);
+}
+
+.cardInfo {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.cardInfo p {
+  width: 100%;
+  text-align: inherit;
+  overflow: auto;
+}
+.cardInfo span {
+  font-weight: bold;
 }

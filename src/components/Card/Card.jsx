@@ -7,9 +7,9 @@ export default function Card({ char_id, name, img, status, occupation }) {
                 <img src={img} alt="" />
             </div>
             <div className={style.cardInfo}>
-                <p>{`Name: ${name}`}</p>
-                <p>{`Status: ${status}`}</p>
-                <p>{`Occupation: ${occupation}`}</p>
+                <p><span>Name: </span>{name}</p>
+                <p><span>Status: </span>{status}</p>
+                <p><span>Occupation: </span>{occupation}</p>
             </div>
         </div>
     )
