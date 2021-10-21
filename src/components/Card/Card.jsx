@@ -1,6 +1,6 @@
 import style from './Card.module.css'
 
-export default function Card({ char_id, name, img, status, occupation }) {
+export default function Card({ birthday, name, img, status, occupation }) {
     return (
         <div className={style.card}>
             <div className={style.cardImg}>
@@ -9,6 +9,7 @@ export default function Card({ char_id, name, img, status, occupation }) {
             <div className={style.cardInfo}>
                 <p><span>Name: </span>{name}</p>
                 <p><span>Status: </span>{status}</p>
+                <p><span>Birthday: </span>{birthday}</p>
                 <p><span>Occupation: </span>{occupation}</p>
             </div>
         </div>

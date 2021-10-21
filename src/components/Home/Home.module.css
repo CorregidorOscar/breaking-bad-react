@@ -39,6 +39,11 @@
   animation-direction: alternate;
 }
 
+.nave {
+  display: flex;
+  justify-content: space-between;
+}
+
 .cards {
   margin-top: 10px;
   display: grid;
