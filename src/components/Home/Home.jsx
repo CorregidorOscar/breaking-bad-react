@@ -12,7 +12,7 @@ export default function Home() {
     //para obtener la busqueda del usuario
     const [search, setSearch] = useState([]);
 
-    const [selected, setSelected] = useState('');
+    let selected = '';
 
     useEffect(() => {
         let char = getCharacters();
@@ -59,6 +59,7 @@ export default function Home() {
     { value: 'Presumed dead', label: 'Presumed dead' },];
     function handleChange(e) {
         const value = e.value;
+        selected = value;
         if (value === 'Clear') setSearch(characters)
         else {
             const filter = characters.filter(character => { return character.status.toLowerCase().includes(value.toLowerCase()); });
